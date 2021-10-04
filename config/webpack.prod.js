@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const postcssObjectFitImages = require('postcss-object-fit-images');
+const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common');
@@ -55,7 +56,18 @@ module.exports = merge(common, {
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), '...'],
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin(),
+      '...',
+    ],
     // runtimeChunk: {
     //   name: 'runtime',
     // },
