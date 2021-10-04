@@ -24,7 +24,7 @@ if (!function_exists('wpnk_setup')):
 {
         show_admin_bar(false);
         add_theme_support('post-thumbnails');
-        // acf_update_setting('google_api_key', 'AIzaSyDvcCztnE5NHUKgR47Fghb8Kf4eDP_fa0k');
+        // acf_update_setting('google_api_key', '');
         register_nav_menus(array(
             'wpnk_nav' => esc_html__('Main WPNK Nav', 'wpnk'),
         ));
