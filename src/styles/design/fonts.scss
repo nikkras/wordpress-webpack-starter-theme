@@ -1,0 +1,58 @@
+$base-path: '../../src/assets/fonts/';
+
+@font-face {
+  font-family: 'Matter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('#{$base-path}Matter/Matter-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Matter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('#{$base-path}Matter/Matter-Regular.woff') format('woff');
+}
+
+// @font-face {
+//   font-family: 'Matter';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-display: swap;
+//   src: url('#{$base-path}Matter/Matter-Medium.woff') format('woff');
+// }
+
+@font-face {
+  font-family: 'Matter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('#{$base-path}Matter/Matter-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Matter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('#{$base-path}Matter/Matter-Bold.woff') format('woff');
+}
+
+// @font-face {
+//   font-family: 'Matter';
+//   font-style: normal;
+//   font-weight: 800;
+//   font-display: swap;
+//   src: url('#{$base-path}Matter/Matter-Heavy.woff') format('woff');
+// }
+
+@font-face {
+  font-family: 'Flaticon';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('#{$base-path}flaticon/flaticon.ttf') format('truetype'),
+    url('#{$base-path}flaticon/flaticon.woff') format('woff');
+}

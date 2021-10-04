@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  // font-size: pxrem(16);
+  font-family: var(--font-primary);
+  background-color: $white;
+  width: 100%;
+  // @include media('>=large') {
+  //   overflow: hidden !important;
+  // }
+  // @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  //   overflow-x: hidden;
+  //   overflow-y: visible;
+  // }
+}
+
+#site {
+  // display: flex;
+  // flex-direction: column;
+  min-height: 100vh;
+}
+
+main.unmounted {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.only-aria-visible {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+dl,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}

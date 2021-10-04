@@ -1,0 +1,131 @@
+i[class^='flaticon-']:before,
+i[class*=' flaticon-']:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+  'arrow-down': '\f101',
+  'plus': '\f102',
+  'arrow-right': '\f103',
+  'arrow-left': '\f104',
+  'mail': '\f105',
+  'instagram': '\f106',
+  'close': '\f107',
+  'whatsapp': '\f108',
+  'share': '\f109',
+  'task': '\f10a',
+  'calendar': '\f10b',
+  'list': '\f10c',
+  'pin': '\f10d',
+  'phone': '\f10e',
+  'mail-1': '\f10f',
+  'download': '\f110',
+  'video-player': '\f111',
+  'right-arrow': '\f112',
+  'next': '\f113',
+  'youtube': '\f114',
+  'facebook': '\f115',
+  'share-1': '\f116',
+  'metering': '\f117',
+  'bed': '\f118',
+  'bathtub': '\f119',
+  'right-arrow-angle': '\f11a',
+  'left-arrow-line-symbol': '\f11b',
+  'tree': '\f11c',
+  'user': '\f11d',
+);
+
+.flaticon-arrow-down:before {
+  content: map-get($flaticon-map, 'arrow-down');
+}
+.flaticon-plus:before {
+  content: map-get($flaticon-map, 'plus');
+}
+.flaticon-arrow-right:before {
+  content: map-get($flaticon-map, 'arrow-right');
+}
+.flaticon-arrow-left:before {
+  content: map-get($flaticon-map, 'arrow-left');
+}
+.flaticon-mail:before {
+  content: map-get($flaticon-map, 'mail');
+}
+.flaticon-instagram:before {
+  content: map-get($flaticon-map, 'instagram');
+}
+.flaticon-close:before {
+  content: map-get($flaticon-map, 'close');
+}
+.flaticon-whatsapp:before {
+  content: map-get($flaticon-map, 'whatsapp');
+}
+.flaticon-share:before {
+  content: map-get($flaticon-map, 'share');
+}
+.flaticon-task:before {
+  content: map-get($flaticon-map, 'task');
+}
+.flaticon-calendar:before {
+  content: map-get($flaticon-map, 'calendar');
+}
+.flaticon-list:before {
+  content: map-get($flaticon-map, 'list');
+}
+.flaticon-pin:before {
+  content: map-get($flaticon-map, 'pin');
+}
+.flaticon-phone:before {
+  content: map-get($flaticon-map, 'phone');
+}
+.flaticon-mail-1:before {
+  content: map-get($flaticon-map, 'mail-1');
+}
+.flaticon-download:before {
+  content: map-get($flaticon-map, 'download');
+}
+.flaticon-video-player:before {
+  content: map-get($flaticon-map, 'video-player');
+}
+.flaticon-right-arrow:before {
+  content: map-get($flaticon-map, 'right-arrow');
+}
+.flaticon-next:before {
+  content: map-get($flaticon-map, 'next');
+}
+.flaticon-youtube:before {
+  content: map-get($flaticon-map, 'youtube');
+}
+.flaticon-facebook:before {
+  content: map-get($flaticon-map, 'facebook');
+}
+.flaticon-share-1:before {
+  content: map-get($flaticon-map, 'share-1');
+}
+.flaticon-metering:before {
+  content: map-get($flaticon-map, 'metering');
+}
+.flaticon-bed:before {
+  content: map-get($flaticon-map, 'bed');
+}
+.flaticon-bathtub:before {
+  content: map-get($flaticon-map, 'bathtub');
+}
+.flaticon-right-arrow-angle:before {
+  content: map-get($flaticon-map, 'right-arrow-angle');
+}
+.flaticon-left-arrow-line-symbol:before {
+  content: map-get($flaticon-map, 'left-arrow-line-symbol');
+}
+.flaticon-tree:before {
+  content: map-get($flaticon-map, 'tree');
+}
+.flaticon-user:before {
+  content: map-get($flaticon-map, 'user');
+}

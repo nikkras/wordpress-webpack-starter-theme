@@ -1,0 +1,100 @@
+.profileWrapper {
+  min-height: 100vh;
+  .profile {
+    padding: px(80) 8% 0;
+    @include media('>=medium') {
+      padding: px(110) 10% 0;
+    }
+    @include media('>=large') {
+      padding: px(160) 13% 0;
+    }
+
+    &__top {
+      position: relative;
+      margin-bottom: px(30);
+      text-align: left;
+      @include media('>=medium') {
+        margin-bottom: px(40);
+      }
+      @include media('>=large') {
+        margin-bottom: px(50);
+      }
+      h1 {
+        padding-top: px(30);
+        margin-bottom: px(5);
+        font-weight: 700;
+        @include fluid-type(34px, 44px, 300px, 1024px);
+        @include media('>=medium') {
+          padding-top: 0;
+        }
+        @include media('>=large') {
+          @include fluid-type(44px, 54px);
+        }
+        @include media('>=hd') {
+          @include fluid-type(54px, 60px, 1675px, 2200px);
+        }
+      }
+      &__username {
+        text-align: left;
+        display: block;
+        line-height: 150%;
+        margin-top: px(10);
+        margin-bottom: px(20);
+        @include fluid-type(15px, 20px, 300px, 1024px);
+        @include media('>=medium') {
+          margin-top: px(15);
+        }
+        @include media('>=large') {
+          margin-top: px(20);
+          line-height: 180%;
+          @include fluid-type(20px, 23px);
+        }
+        @include media('>=hd') {
+          @include fluid-type(23px, 25px, 1675px, 2200px);
+        }
+      }
+      .btn--small {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &__lower {
+      border-top: 1px solid $grey-3;
+      text-align: left;
+      padding: px(30) 0 px(30);
+
+      @include media('>=medium') {
+        padding: px(40) 0 px(60);
+      }
+      @include media('>=large') {
+        padding: px(50) 0 px(70);
+      }
+      &__activity {
+        display: block;
+        margin-bottom: px(50);
+        span {
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: px(5);
+          font-size: var(--text-sm);
+        }
+        h3 {
+          margin-top: 0;
+          padding-top: 0;
+          font-weight: 700;
+          display: block;
+          @include fluid-type(30px, 37px, 300px, 1024px);
+          @include media('>=large') {
+            @include fluid-type(37px, 42px);
+          }
+          @include media('>=hd') {
+            @include fluid-type(42px, 48px, 1675px, 2200px);
+          }
+        }
+      }
+      // &__city {
+      // }
+    }
+  }
+}
