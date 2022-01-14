@@ -1,3 +1,75 @@
+@use 'sass:math';
+
+// Use two pixel values to convert line-height into a unitless number
+// @example scss Input
+//   p {
+//     font-size: 16px;
+//     line-height: line-height(16, 30);
+//   }
+@function line-height($font-size, $line-height) {
+  @if $line-height==normal {
+    @return normal;
+  }
+  @return $line-height / $font-size;
+}
+
+// Use two pixel values to convert letter-spacing into an em value
+// @example scss Input
+//   p {
+//     font-size: 16px;
+//     // letter-spacing: -0.1px;
+//     letter-spacing: letter-spacing(16, -0.1);
+//   }
+@function letter-spacing($font-size, $letter-spacing) {
+  @if $letter-spacing==normal {
+    @return normal;
+  }
+  @return #{$letter-spacing / $font-size}em;
+}
+
+// Define font-size, line-height and letter-spacing in function
+// @example scss Input
+//   p {
+//     // font-size: 16px;
+//     // letter-spacing: -0.1px;
+//     // line-height: 1.5; // This is line-height 24px and font-size: 16px
+//     @include font-size(16, 24, -0.1)
+//   }
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: px($font-size);
+  line-height: line-height($font-size, $line-height);
+
+  @if $letter-spacing !=0 {
+    letter-spacing: letter-spacing($font-size, $letter-spacing);
+  }
+}
+
+// Define font-clamp, Linearly Scale font-size with CSS clamp() Based on the Viewport
+// Personal scss mixin conversion of generator by csstricks
+// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+// @example scss Input
+//   p {
+//     @include font-fluid(40, 80, 1024, 2200);
+//   }
+@mixin font-fluid($min-fs, $max-fs, $minWidthPx, $maxWidthPx) {
+  $minWidth: math.div($minWidthPx, 10);
+  $maxWidth: math.div($maxWidthPx, 10);
+
+  $min-fs-strip: $min-fs * 0.1;
+  $max-fs-strip: $max-fs * 0.1;
+
+  $min-fs-rem: $min-fs * 0.1rem;
+  $max-fs-rem: $max-fs * 0.1rem;
+
+  $slope: math.div(($max-fs-strip - $min-fs-strip), ($maxWidth - $minWidth));
+  $yAxisIntersection: (-$minWidth * $slope) + $min-fs-strip;
+
+  $yAxisIntersection-rem: $yAxisIntersection * 1rem;
+  $slope-vw: $slope * 100vw;
+
+  font-size: clamp($min-fs-rem, (#{$yAxisIntersection-rem} + #{$slope-vw}), $max-fs-rem);
+}
+
 /// Improve animation performance for containers
 /// @example scss Input
 ///   .card {
@@ -164,42 +236,6 @@ $baseFontSize: 16;
   font-size: inherit;
   text-transform: inherit;
   color: inherit;
-}
-
-/// Fluid Typography
-/// https://css-tricks.com/snippets/css/fluid-typography/
-///
-/// html {
-///   @include fluid-type($min_font, $max_font, $min_width, $max_width);
-/// }
-
-$min-vw-default: map-get($layout-map, breakpoint-large);
-$max-vw-default: map-get($layout-map, breakpoint-hd);
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-font-size, $max-font-size, $min-vw: $min-vw-default, $max-vw: $max-vw-default) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
-        );
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
 }
 
 // Custom Easing Mixin

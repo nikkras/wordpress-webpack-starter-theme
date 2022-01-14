@@ -24,19 +24,18 @@
   --font-secondary-capital-letter: 1;
 }
 
-body {
-  // font-size: var(--text-base-size);
-  font-size: 1em;
-  @include media('>=medium') {
-    font-size: 1.05em;
-  }
-  @include media('>=large') {
-    font-size: 1.25em;
-  }
-  @include media('>=xlarge') {
-    font-size: 1.3em;
-  }
-}
+// body {
+//   font-size: 1em;
+//   @include media('>=medium') {
+//     font-size: 1.05em;
+//   }
+//   @include media('>=large') {
+//     font-size: 1.25em;
+//   }
+//   @include media('>=xlarge') {
+//     font-size: 1.3em;
+//   }
+// }
 
 h1,
 h2,
