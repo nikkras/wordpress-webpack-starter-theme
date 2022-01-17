@@ -26,12 +26,12 @@
       margin-top: 0;
       margin-bottom: px(10);
       font-weight: 700;
-      @include fluid-type(34px, 44px, 300px, 1024px);
+      @include font-fluid(34, 44, 300, 1024);
       @include media('>=large') {
-        @include fluid-type(44px, 54px);
+        @include font-fluid(44, 54);
       }
       @include media('>=hd') {
-        @include fluid-type(54px, 60px, 1675px, 2200px);
+        @include font-fluid(54, 60, 1675, 2200);
       }
       .page--modifica-profilo & {
         text-align: left;
@@ -57,17 +57,17 @@
       line-height: 150%;
       margin-top: px(10);
       margin-bottom: px(20);
-      @include fluid-type(15px, 20px, 300px, 1024px);
+      @include font-fluid(15, 20, 300, 1024);
       @include media('>=medium') {
         margin-top: px(15);
       }
       @include media('>=large') {
         margin-top: px(20);
         line-height: 180%;
-        @include fluid-type(20px, 23px);
+        @include font-fluid(20, 23);
       }
       @include media('>=hd') {
-        @include fluid-type(23px, 25px, 1675px, 2200px);
+        @include font-fluid(23, 25, 1675, 2200);
       }
       ul {
         margin: px(10) px(8) px(20);
@@ -113,12 +113,12 @@
         left: 20%;
       }
       h1 {
-        @include fluid-type(28px, 36px, 300px, 1024px);
+        @include font-fluid(28, 36, 300, 1024);
         @include media('>=large') {
-          @include fluid-type(36px, 45px);
+          @include font-fluid(36, 45);
         }
         @include media('>=hd') {
-          @include fluid-type(45px, 50px, 1675px, 2200px);
+          @include font-fluid(45, 50, 1675, 2200);
         }
       }
     }

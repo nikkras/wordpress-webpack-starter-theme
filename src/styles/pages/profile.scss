@@ -23,15 +23,15 @@
         padding-top: px(30);
         margin-bottom: px(5);
         font-weight: 700;
-        @include fluid-type(34px, 44px, 300px, 1024px);
+        @include font-fluid(34, 44, 300, 1024);
         @include media('>=medium') {
           padding-top: 0;
         }
         @include media('>=large') {
-          @include fluid-type(44px, 54px);
+          @include font-fluid(44, 54);
         }
         @include media('>=hd') {
-          @include fluid-type(54px, 60px, 1675px, 2200px);
+          @include font-fluid(54, 60, 1675, 2200);
         }
       }
       &__username {
@@ -40,17 +40,17 @@
         line-height: 150%;
         margin-top: px(10);
         margin-bottom: px(20);
-        @include fluid-type(15px, 20px, 300px, 1024px);
+        @include font-fluid(15, 20, 300, 1024);
         @include media('>=medium') {
           margin-top: px(15);
         }
         @include media('>=large') {
           margin-top: px(20);
           line-height: 180%;
-          @include fluid-type(20px, 23px);
+          @include font-fluid(20, 23);
         }
         @include media('>=hd') {
-          @include fluid-type(23px, 25px, 1675px, 2200px);
+          @include font-fluid(23, 25, 1675, 2200);
         }
       }
       .btn--small {
@@ -84,12 +84,12 @@
           padding-top: 0;
           font-weight: 700;
           display: block;
-          @include fluid-type(30px, 37px, 300px, 1024px);
+          @include font-fluid(30, 37, 300, 1024);
           @include media('>=large') {
-            @include fluid-type(37px, 42px);
+            @include font-fluid(37, 42);
           }
           @include media('>=hd') {
-            @include fluid-type(42px, 48px, 1675px, 2200px);
+            @include font-fluid(42, 48, 1675, 2200);
           }
         }
       }

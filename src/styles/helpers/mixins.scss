@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 // Use two pixel values to convert line-height into a unitless number
 // @example scss Input
 //   p {
@@ -51,9 +49,9 @@
 //   p {
 //     @include font-fluid(40, 80, 1024, 2200);
 //   }
-@mixin font-fluid($min-fs, $max-fs, $minWidthPx, $maxWidthPx) {
-  $minWidth: math.div($minWidthPx, 10);
-  $maxWidth: math.div($maxWidthPx, 10);
+@mixin font-fluid($min-fs, $max-fs, $minWidthPx: 1024, $maxWidthPx: 2200) {
+  $minWidth: $minWidthPx / 10;
+  $maxWidth: $maxWidthPx / 10;
 
   $min-fs-strip: $min-fs * 0.1;
   $max-fs-strip: $max-fs * 0.1;
@@ -61,7 +59,7 @@
   $min-fs-rem: $min-fs * 0.1rem;
   $max-fs-rem: $max-fs * 0.1rem;
 
-  $slope: math.div(($max-fs-strip - $min-fs-strip), ($maxWidth - $minWidth));
+  $slope: ($max-fs-strip - $min-fs-strip) / ($maxWidth - $minWidth);
   $yAxisIntersection: (-$minWidth * $slope) + $min-fs-strip;
 
   $yAxisIntersection-rem: $yAxisIntersection * 1rem;

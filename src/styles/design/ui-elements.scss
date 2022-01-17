@@ -230,12 +230,12 @@
     text-decoration: none;
     transition: color 0.3s ease;
     margin-top: px(20);
-    @include fluid-type(22px, 28px, 300px, 1024px);
+    @include font-fluid(22, 28, 300, 1024);
     @include media('>=large') {
-      @include fluid-type(17px, 20px);
+      @include font-fluid(17, 20);
     }
     @include media('>=hd') {
-      @include fluid-type(20px, 24px, 1675px, 2200px);
+      @include font-fluid(20, 24, 1675, 2200);
     }
     @include media('>=large') {
       margin-top: 0;
@@ -320,12 +320,12 @@ ul.listMenu {
       line-height: 1;
       text-decoration: none;
       transition: color 0.3s ease;
-      @include fluid-type(20px, 26px, 300px, 1024px);
+      @include font-fluid(20, 26, 300, 1024);
       @include media('>=large') {
-        @include fluid-type(15px, 17px);
+        @include font-fluid(15, 17);
       }
       @include media('>=hd') {
-        @include fluid-type(17px, 19px, 1675px, 2200px);
+        @include font-fluid(17, 19, 1675, 2200);
       }
       @include media('>=large') {
         align-self: center;

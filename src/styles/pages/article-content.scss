@@ -19,12 +19,12 @@
       margin-bottom: px(10);
       font-weight: 700;
       text-align: center;
-      @include fluid-type(30px, 42px, 300px, 1024px);
+      @include font-fluid(30, 42, 300, 1024);
       @include media('>=large') {
-        @include fluid-type(42px, 54px);
+        @include font-fluid(42, 54);
       }
       @include media('>=hd') {
-        @include fluid-type(54px, 60px, 1675px, 2200px);
+        @include font-fluid(54, 60, 1675, 2200);
       }
     }
     &__image {
@@ -90,7 +90,7 @@
 
       p {
         line-height: 1.6;
-        @include fluid-type(15px, 20px, 300px, 1024px);
+        @include font-fluid(15, 20, 300, 1024);
         @include media('>=msmall') {
           margin-top: calc(var(--space-sm) * 1.2);
           margin-bottom: calc(var(--space-sm) * 1.2);
@@ -100,7 +100,7 @@
         }
         @include media('>=large') {
           line-height: 1.9;
-          @include fluid-type(20px, 22px);
+          @include font-fluid(20, 22);
           margin-top: var(--space-md);
           margin-bottom: var(--space-md);
         }
@@ -109,7 +109,7 @@
           margin-bottom: calc(var(--text-md) * 1.1);
         }
         @include media('>=hd') {
-          @include fluid-type(22px, 24px, 1675px, 2200px);
+          @include font-fluid(22, 24, 1675, 2200);
           margin-bottom: calc(var(--text-md) * 1.2);
         }
       }
